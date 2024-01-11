@@ -1,21 +1,58 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import SocialPill from "../icons/SocialPill.astro"
+import Linkedin from "../icons/Linkedin.astro"
+import Github from "../icons/Github.astro"
+import Mail from "../icons/Mail.astro"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout 
+title="<Facundo Fernandez/> - Frontend web developer"
+description="PONER ACA UNA DESCRIPCION CON MIS CUALIDADES">
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
-      <h1 class="text-white text-5xl font-bold flex justify-center flex-row">
-        Hey, I'm Facundo Fernandez <Badge>Open to work</Badge>
+
+      <img
+    class="rounded-full size-24 pb-2"
+    src="../../src/assets/profilePicture.jpg"
+    alt=""
+  />
+
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, I'm Facundo <a
+          class="flex justify-center items-center"
+          href="https://www.linkedin.com/in/facundofernandez1991"
+          target="_blank"
+          rel="noopener"
+        >
+          <Badge>Open to work</Badge>
+        </a>
       </h1>
-      <h2>
-        2 years experience, Frontend Developer & UX Enthusiast. Currently based
-        in Ireland. AGREGAR MAS COSAS A LA DESCRIPCION
+      <h2 class="text-2xl text-wrap">
+        2 years experience, Frontend Developer & UX Enthusiast.
+        AGREGAR COSAS A LA DESCRIPCION
       </h2>
 
-      <ul></ul>
+      
+        <nav class="flex gap-x-4 mt-4">
+
+          <SocialPill href="https://www.linkedin.com/in/facundofernandez1991">
+            <Linkedin class="size-6" />
+            LinkedIn
+          </SocialPill>
+
+            <SocialPill href="https://github.com/1991facundo">
+            <Github class="size-6" />
+            GitHub
+          </SocialPill>
+
+           <SocialPill href="https://github.com/1991facundo">
+            <Mail class="size-6" />
+            facundo91.1401@gmail.com
+          </SocialPill>
+        </nav>
+      
     </section>
   </main>
 </Layout>
