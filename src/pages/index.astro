@@ -9,7 +9,9 @@ import Mail from "../icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Code from "../icons/Code.astro";
-import Projects from "../components/Projects.astro"
+import Projects from "../components/Projects.astro";
+import Form from "../components/Form.astro";
+import HardSkills from "../components/HardSkills.astro"
 ---
 
 <Layout
@@ -17,9 +19,10 @@ import Projects from "../components/Projects.astro"
   description="PONER ACA UNA DESCRIPCION CON MIS CUALIDADES"
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
+    
+    <SectionContainer class="py-32 pb-20">
       <img
-        class="rounded-full size-24 pb-2"
+        class="rounded-t-3xl size-32 pb-2"
         src="../../src/assets/profilePicture.jpg"
         alt=""
       />
@@ -35,8 +38,7 @@ import Projects from "../components/Projects.astro"
         </a>
       </h1>
       <h2 class="text-2xl text-wrap">
-        2 years experience, Frontend Developer & UX Enthusiast. AGREGAR COSAS A
-        LA DESCRIPCION
+        Frontend Developer & UX Enthusiast.
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
@@ -57,10 +59,22 @@ import Projects from "../components/Projects.astro"
       </nav>
     </SectionContainer>
 
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mt-8">
+        Coding Skills
+
+        <HardSkills/>
+      </h2>
+
+       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mt-8">
+        Soft Skills
+      </h2>
+    </SectionContainer>
+
     <SectionContainer id="projects">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mt-8">
         <Code class="size-7" />
-        Projects
+        Last Project
       </h2>
       <Projects />
     </SectionContainer>
@@ -71,6 +85,14 @@ import Projects from "../components/Projects.astro"
         Work Experience
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="contact">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mt-8">
+        <Briefcase class="size-8" />
+        Contact Form
+      </h2>
+      <Form />
     </SectionContainer>
   </main>
 </Layout>
