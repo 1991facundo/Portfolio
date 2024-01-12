@@ -1,0 +1,23 @@
+---
+const skills = [
+  "Scrum Knowledge",
+  "Agile Practices",
+  "Clean Code Writer",
+  "Objective-Oriented",
+  "Communication Skills",
+  "Problem-Solving Skills",
+  "Teamwork and Collaboration",
+  "Adaptability",
+  "Empathy and User Focus",
+  "Continuous Learning",
+];
+
+const skillClass = "bg-blue-100 text-blue-800 p-2 rounded-md m-1";
+---
+
+
+<div class="p-1">
+  <div class="flex flex-wrap">
+    {skills.map((skill) => <span class={skillClass}>{skill}</span>)}
+  </div>
+</div>

@@ -5,11 +5,11 @@ import connectinkImage from "../assets/connectink.jpeg"
 const PROJECTS = [
   {
     title: "ConnectINK",
-    description: "Descripcion del proyecto",
+    description: "This groundbreaking platform revolutionizes how tattoo artists and enthusiasts connect. It offers a unique space for artists to display their work, manage schedules, and connect with clients, who in turn can easily browse, appreciate, and book tattoo sessions. I utilized React.js and Next.js to develop an intuitive and engaging user interface, ensuring a seamless and enjoyable user experience. My focus was on crafting a visually appealing design using Tailwind CSS, making the platform not only attractive but also responsive and accessible across various devices. A key part of my responsibilities included integrating Redux Toolkit for efficient state management, which significantly enhanced the app's performance. My contribution to ConnectInk was to create a functional, user-friendly, and aesthetically pleasing platform, fostering a meaningful and efficient connection between tattoo artists and their clients.",
     link: "https://connectink.vercel.app/",
     github: "Repositorio de github",
     image: connectinkImage.src,
-    tags: ['HTML', 'CSS', 'Javascript'],
+    tags: ["React.js", "Redux", "Next.js", "TailwindCSS", "JavaScript", "HTML", "CSS", "Node.js", "Express", "PostgreSQL", "Sequelize" ],
     video:"el link al video"
   }
 ];
@@ -17,18 +17,24 @@ const PROJECTS = [
 
 {
     PROJECTS.map(project => (
-
-    <article>
-        <h3 class="text-2xl font-semibold mb-2 text-[#48d9e6]">{project.title}</h3>
-        <p class="text-lg mb-4 text-pretty">{project.description}</p>
-        <a href= {project.link}>Link to the project</a>
-        <img class="rounded-3xl shadow-xl shadow-white/10 size-3/4" src={project.image} alt="ConnectInk image">
-          <div class="flex mt-4">
-        {project.tags.map((tag) => (
-            <span class="mr-2">#{tag}</span>
-        ))}
-    </div>
-    </article>
-
+        <article class="relative group p-4 md:p-6">
+            <h3 class="text-xl md:text-2xl font-semibold mb-2 text-[#48d9e6]">{project.title}</h3>
+            <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
+            <div class="relative">
+                <a href={project.link} class="block">
+                    <img class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full" src={project.image} alt="ConnectInk image">
+                    <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 group-hover:opacity-100 rounded-3xl flex items-center justify-center">
+                        <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Click to visit site</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex flex-wrap mt-4 text-pretty">
+                {project.tags.map((tag) => (
+                    <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
+                ))}
+            </div>
+        </article>
     ))
 }
+
+
