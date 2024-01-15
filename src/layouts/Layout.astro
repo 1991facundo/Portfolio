@@ -9,6 +9,7 @@ import "@fontsource-variable/onest";
 const { title, description } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
 ---
 
 <!doctype html>
@@ -20,13 +21,17 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
   </head>
   <body>
-    <div class="absolute top-0 z-[-2] h-screen max-w-full w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <div
+      class="absolute top-0 z-[-2] h-screen max-w-full w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
     <Header />
     <slot />
 
-    <Footer/>
+    <Footer />
   </body>
 </html>
 
@@ -47,7 +52,7 @@ import Footer from "../components/Footer.astro";
   }
 
   @media (prefers-reduced-motion: reduce) {
-    html{
+    html {
       scroll-behavior: auto;
     }
   }
