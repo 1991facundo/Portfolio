@@ -111,7 +111,7 @@ const PROJECTS = [
       <h3 class="text-xl md:text-2xl font-semibold mb-2 text-[#48d9e6]">
         {project.title}
       </h3>
-      <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p> <!-- Línea agregada para el año -->
+      <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p> <!-- Año -->
       <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
       <div class="relative">
         <a href={project.Demo ? project.Demo : project.link} class="block">
@@ -131,6 +131,22 @@ const PROJECTS = [
         {project.tags.map((tag) => (
           <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
         ))}
+      </div>
+      <div class="flex mt-2 text-pretty">
+        <a href={project.github} class="flex items-center text-gray-400 hover:text-white transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="w-6 h-6 mr-1"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 0a8 8 0 0 0-2.534 15.59c.4.075.546-.174.546-.385 0-.19-.007-.692-.01-1.36-2.002.364-2.623-.49-2.8-.94-.094-.238-.506-.94-.86-1.13-.294-.133-.714-.46-.012-.466.662-.004 1.135.608 1.29.854.753 1.29 1.96.92 2.44.7.075-.544.29-.92.53-1.13-1.86-.21-3.81-.93-3.81-4.12 0-.91.32-1.66.854-2.24-.083-.21-.37-1.06.083-2.21 0 0 .7-.224 2.3.86a7.47 7.47 0 0 1 2-.27 7.47 7.47 0 0 1 2 .27c1.6-1.08 2.3-.86 2.3-.86.46 1.15.17 2.01.083 2.21.53.58.854 1.33.854 2.24 0 3.19-1.95 3.91-3.81 4.11.3.26.54.775.54 1.56 0 1.13-.01 2.04-.01 2.31 0 .21.14.46.55.38A8.006 8.006 0 0 0 8 0z"
+            />
+          </svg>
+          GitHub
+        </a>
       </div>
     </article>
   ))
