@@ -1,5 +1,5 @@
 <header class="py-8 mx-auto text-xl text-white">
-
+  <!-- Input para el menú desplegable -->
   <input
     type="checkbox"
     class="hidden md:hidden"
@@ -7,7 +7,7 @@
     aria-label="Toggle menu"
   />
 
-
+  <!-- Menú visible en pantallas grandes -->
   <nav
     class="hidden md:flex justify-center items-center flex-col md:flex-row md:flex-wrap gap-x-10 opacity-80 rounded-lg border-b-2 shadow-md shadow-white p-2"
   >
@@ -41,12 +41,12 @@
     >
   </nav>
 
-
+  <!-- Menú desplegable en pantallas móviles -->
   <div class="md:hidden flex flex-col items-center">
     <label for="menu-toggle" class="cursor-pointer bg-white/10 p-2 rounded-lg">
       Menu
     </label>
-    <div class="menu-dropdown hidden">
+    <div class="menu-dropdown">
       <a href="#top" class="my-2 hover:scale-105 hover:bg-white/5 transition"
         >Home</a
       >
