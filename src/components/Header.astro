@@ -1,15 +1,15 @@
 <header class="py-8 mx-auto text-xl text-white">
-  <!-- Input para el menú desplegable -->
+ 
   <input
     type="checkbox"
-    class="hidden md:hidden"
+    class="hidden"
     id="menu-toggle"
     aria-label="Toggle menu"
   />
 
-  <!-- Menú visible en pantallas grandes -->
+
   <nav
-    class="hidden md:flex justify-center items-center flex-col md:flex-row md:flex-wrap gap-x-10 opacity-80 rounded-lg border-b-2 shadow-md shadow-white p-2"
+    class="md:flex justify-center items-center flex-col md:flex-row md:flex-wrap gap-x-10 opacity-80 rounded-lg border-b-2 shadow-md shadow-white p-2"
   >
     <a
       href="#top"
@@ -41,35 +41,32 @@
     >
   </nav>
 
-  <!-- Menú desplegable en pantallas móviles -->
-  <div class="md:hidden flex flex-col items-center">
-    <label for="menu-toggle" class="cursor-pointer bg-white/10 p-2 rounded-lg">
-      Menu
-    </label>
-    <div class="menu-dropdown">
-      <a href="#top" class="my-2 hover:scale-105 hover:bg-white/5 transition"
-        >Home</a
-      >
-      <a href="#about" class="my-2 hover:scale-105 hover:bg-white/5 transition"
-        >About</a
-      >
-      <a
-        href="#projects"
-        class="my-2 hover:scale-105 hover:bg-white/5 transition">Project</a
-      >
-      <a
-        href="#experience"
-        class="my-2 hover:scale-105 hover:bg-white/5 transition">Experience</a
-      >
-      <a
-        href="#contact"
-        class="my-2 hover:scale-105 hover:bg-white/5 transition">Contact</a
-      >
-      <a
-        href="https://drive.google.com/uc?export=download&id=1VCQMxuX8s9lH7MySWGz7xIgqSSTSPrDy"
-        class="my-2 hover:scale-105 hover:bg-white/5 transition"
-        download="FacundoFernandez-Resume.pdf">Download CV</a
-      >
-    </div>
+  <label
+    for="menu-toggle"
+    class="md:hidden cursor-pointer bg-white/10 p-2 rounded-lg"
+  >
+    Menu
+  </label>
+  <div
+    class="md:hidden absolute top-16 left-0 w-full bg-white transition-all duration-300 ease-in-out"
+    style="max-height: 0; overflow: hidden;"
+    data-animation="slide-in"
+  >
+    <a href="#top" class="block py-2 hover:bg-white/5 text-center">Home</a>
+    <a href="#about" class="block py-2 hover:bg-white/5 text-center">About</a>
+    <a href="#projects" class="block py-2 hover:bg-white/5 text-center"
+      >Projects</a
+    >
+    <a href="#experience" class="block py-2 hover:bg-white/5 text-center"
+      >Experience</a
+    >
+    <a href="#contact" class="block py-2 hover:bg-white/5 text-center"
+      >Contact</a
+    >
+    <a
+      href="https://drive.google.com/uc?export=download&id=1VCQMxuX8s9lH7MySWGz7xIgqSSTSPrDy"
+      class="block py-2 hover:bg-white/5 text-center"
+      download="FacundoFernandez-Resume.pdf">Download CV</a
+    >
   </div>
 </header>
