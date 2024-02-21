@@ -4,8 +4,28 @@ import pokemonImg from "../assets/pokemon.jpeg";
 import rickImg from "../assets/rickandmorty.png";
 import poblenouImg from "../assets/poblenou.jpg";
 import barcadeImg from "../assets/barcade.jpg";
+import mtgImg from "../assets/mtg.png";
 
 const PROJECTS = [
+   {
+    year: "2024" ,
+    title: "Web Developer Intern @ Montagne Outdoors",
+    description:
+      "Currently interning at Montagne Outdoors as a Web Developer, focusing on enhancing the company's e-commerce platform. My responsibilities include implementing new features, optimizing website performance, and ensuring a seamless user experience. Working with technologies like PHP, JavaScript, and MySQL in a PrestaShop environment, I contribute to the continuous improvement of montagne.com.ar. Additionally, I actively participate in agile development processes, collaborate with the team, and enhance my skills in web development.",
+    image: mtgImg.src,
+    tags: [
+      "JavaScript",
+      "PHP",
+      "PrestaShop",
+      "HTML",
+      "CSS",
+      "MySQL",
+      "Apache",
+      "AWS",
+      "Jquery",
+    ],
+    link: "https://www.montagne.com.ar",
+  },
   {
     year: 2023,
     title: "ConnectINK",
@@ -111,7 +131,7 @@ const PROJECTS = [
       <h3 class="text-xl md:text-2xl font-semibold mb-2 text-[#48d9e6]">
         {project.title}
       </h3>
-      <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p> <!-- Año -->
+      <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p>
       <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
       <div class="relative">
         <a href={project.Demo ? project.Demo : project.link} class="block">
@@ -132,161 +152,25 @@ const PROJECTS = [
           <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
         ))}
       </div>
-      <div class="flex mt-2 text-pretty">
-        <a href={project.github} class="flex items-center text-gray-400 hover:text-white transition">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            class="w-6 h-6 mr-1"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8 0a8 8 0 0 0-2.534 15.59c.4.075.546-.174.546-.385 0-.19-.007-.692-.01-1.36-2.002.364-2.623-.49-2.8-.94-.094-.238-.506-.94-.86-1.13-.294-.133-.714-.46-.012-.466.662-.004 1.135.608 1.29.854.753 1.29 1.96.92 2.44.7.075-.544.29-.92.53-1.13-1.86-.21-3.81-.93-3.81-4.12 0-.91.32-1.66.854-2.24-.083-.21-.37-1.06.083-2.21 0 0 .7-.224 2.3.86a7.47 7.47 0 0 1 2-.27 7.47 7.47 0 0 1 2 .27c1.6-1.08 2.3-.86 2.3-.86.46 1.15.17 2.01.083 2.21.53.58.854 1.33.854 2.24 0 3.19-1.95 3.91-3.81 4.11.3.26.54.775.54 1.56 0 1.13-.01 2.04-.01 2.31 0 .21.14.46.55.38A8.006 8.006 0 0 0 8 0z"
-            />
-          </svg>
-          GitHub
-        </a>
-      </div>
+      {project.github && (
+        <div class="flex mt-2 text-pretty">
+          <a href={project.github} class="flex items-center text-gray-400 hover:text-white transition">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="w-6 h-6 mr-1"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 0a8 8 0 0 0-2.534 15.59c.4.075.546-.174.546-.385 0-.19-.007-.692-.01-1.36-2.002.364-2.623-.49-2.8-.94-.094-.238-.506-.94-.86-1.13-.294-.133-.714-.46-.012-.466.662-.004 1.135.608 1.29.854.753 1.29 1.96.92 2.44.7.075-.544.29-.92.53-1.13-1.86-.21-3.81-.93-3.81-4.12 0-.91.32-1.66.854-2.24-.083-.21-.37-1.06.083-2.21 0 0 .7-.224 2.3.86a7.47 7.47 0 0 1 2-.27 7.47 7.47 0 0 1 2 .27c1.6-1.08 2.3-.86 2.3-.86.46 1.15.17 2.01.083 2.21.53.58.854 1.33.854 2.24 0 3.19-1.95 3.91-3.81 4.11.3.26.54.775.54 1.56 0 1.13-.01 2.04-.01 2.31 0 .21.14.46.55.38A8.006 8.006 0 0 0 8 0z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      )}
     </article>
   ))
 }
 
-
-<!-- ---
-import connectinkImage from "../assets/connectink.jpeg";
-import pokemonImg from "../assets/pokemon.jpeg";
-import rickImg from "../assets/rickandmorty.png";
-import poblenouImg from "../assets/poblenou.jpg";
-import barcadeImg from "../assets/barcade.jpg";
-
-const PROJECTS = [
-  {
-    year: 2023,
-    title: "ConnectINK",
-    description:
-      "This groundbreaking platform revolutionizes how tattoo artists and enthusiasts connect. It offers a unique space for artists to display their work, manage schedules, and connect with clients, who in turn can easily browse, appreciate, and book tattoo sessions. I utilized React.js and Next.js to develop an intuitive and engaging user interface, ensuring a seamless and enjoyable user experience. My focus was on crafting a visually appealing design using Tailwind CSS, making the platform not only attractive but also responsive and accessible across various devices. A key part of my responsibilities included integrating Redux Toolkit for efficient state management, which significantly enhanced the app's performance. My contribution to ConnectInk was to create a functional, user-friendly, and aesthetically pleasing platform, fostering a meaningful and efficient connection between tattoo artists and their clients.",
-    link: "https://connectink.vercel.app/",
-    github: "https://github.com/1991facundo/ConnectInk",
-    image: connectinkImage.src,
-    tags: [
-      "React.js",
-      "Redux",
-      "Next.js",
-      "TailwindCSS",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Sequelize",
-      "Cloudinary",
-      "Firebase",
-    ],
-    Demo: "https://youtu.be/g8iIK1iHBBQ?si=tH3Rd-HFc9452JGP",
-  },
-
-  {
-    year: 2023,
-    title: "Pokémon API UI",
-    image: pokemonImg.src,
-    description:
-      "This application is a fusion of childhood nostalgia for Pokémon and my passion for coding. Developed with React.js, it features an interactive Pokédex and a unique feature for creating custom Pokémon. The UI, enhanced by Tailwind CSS, ensures a responsive and engaging experience. With Redux for state management, and a backend powered by Node.js, Express, PostgreSQL, and Sequelize, the platform is both robust and user-friendly. This project not only reconnects users with their cherished Pokémon memories but also showcases modern web development's capabilities in creating immersive experiences. My aim was to blend the magic of Pokémon with cutting-edge technology, providing a platform that is both nostalgic and forward-looking, appealing to fans across generations.",
-    github: "https://github.com/1991facundo/PI-Pokemon-1991facundo",
-    tags: [
-      "React.js",
-      "Redux",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Sequelize"
-    ],
-    Demo: "https://youtu.be/hH3D6g3d4eM?si=_uv1iGwYHA0_5NwP",
-  },
-
-   {
-    year: 2023,
-    title: "Rick & Morty API UI",
-    image: rickImg.src,
-    description:
-      "This Rick and Morty API UI project, my first foray into full-stack development, orbits around the cosmic adventure of web programming. Leveraging the same powerful stack—React.js, Redux, JavaScript, HTML, CSS, Node.js, Express, PostgreSQL, and Sequelize—I created a portal to the universe of Rick and Morty. The application serves as a galactic hub where fans can explore characters, locations, and episodes from the show, all within a user interface designed to mirror the quirky, interdimensional vibe of Rick and Morty. Enhanced by Tailwind CSS, the design is not only visually striking but also responsive, ensuring a seamless journey across devices. This project was a space-time continuum of learning and creativity, aiming to provide an engaging platform for fans to dive deep into the show's lore, while showcasing the potential of modern web technologies to bring beloved universes to life.",
-    tags: [
-      "React.js",
-      "Redux",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Sequelize"
-    ],
-    Demo: "https://youtu.be/NAoxIF0anAs?si=fzMxqgOw5vHR2mRe",
-  },
-
-  {
-    year:2022,
-    title: "PobleNou marketing agency website",
-    image: poblenouImg.src,
-    github: "https://github.com/1991facundo/final-diplomado-frontEnd-Utn",
-    description:
-      "In this project, I embarked on developing a dynamic marketing agency website, utilizing my skills in HTML, CSS, JavaScript, and Bootstrap for the first time in a cohesive project. This venture aimed to craft a visually engaging and informative platform to highlight the agency's services, including digital marketing, content creation, and social media management. Through the integration of Bootstrap, I ensured the website's design was responsive and adaptable across various devices, providing an optimal viewing experience for all users. JavaScript played a pivotal role in adding interactivity and enhancing the user interface, making the agency's offerings and achievements stand out. This project was not just about building a website; it was about creating a digital gateway that reflects the agency's innovative approach to marketing, showcasing my ability to blend design with functionality effectively.",
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap"
-    ],
-    link: "https://facundofernandez-final-utn-bootstrap.netlify.app/",
-  },
-
-  {
-    year:2022,
-    title: "Barcade website",
-    image: barcadeImg.src,
-    github: "https://github.com/1991facundo/Barcade-LandingAndFormResponsive",
-    description:
-      "In my first foray into web development, I created a comprehensive landing page for Barcade, a unique establishment combining a bar's social atmosphere with the thrill of arcade gaming. This project was my introduction to coding, utilizing HTML and CSS exclusively. It was an exploration into web design, focusing on creating a multi-page website that effectively communicates the Barcade concept. I incorporated CSS animations to enhance the user experience, adding interactive elements that engage visitors as they navigate through the site. These animations were thoughtfully designed to complement the site's theme, capturing the playful and dynamic essence of arcade gaming. A key feature of the website is a contact form, inviting users to get in touch or book events, demonstrating my initial venture into creating interactive web elements. This project was not just about learning HTML and CSS; it was about weaving those skills into creating a functional, engaging, and visually appealing website that mirrors the fun and uniqueness of the Barcade experience, marking a significant milestone in my journey into web development.",
-    tags: [
-      "HTML",
-      "CSS",
-      "CSS Animations"
-    ],
-    link: "https://facundofernandez-land-form.netlify.app/",
-  },
-];
----
-
-{
-  PROJECTS.map((project) => (
-    <article class="relative group p-4 md:p-6 text-white">
-      <h3 class="text-xl md:text-2xl font-semibold mb-2 text-[#48d9e6]">
-        {project.title}
-      </h3>
-      <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
-      <div class="relative">
-        <a href={project.link} class="block">
-          <img
-            class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full"
-            src={project.image}
-            alt="ConnectInk image"
-          />
-          <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 group-hover:opacity-100 rounded-3xl flex items-center justify-center">
-            <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">
-              Click to visit site
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="flex flex-wrap mt-4 text-pretty">
-        {project.tags.map((tag) => (
-          <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
-        ))}
-      </div>
-    </article>
-  ))
-} -->
