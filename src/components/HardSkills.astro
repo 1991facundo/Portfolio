@@ -19,9 +19,9 @@ const skillClass = "bg-blue-100 text-blue-800 p-2 rounded-md m-1";
 <div class="p-4">
   {skills.map((category) => (
     <div>
-      <h3 class="font-bold text-xl mb-2">{category.category}</h3>
+      <h3 class="font-bold text-xl mb-2 text-white">{category.category}</h3>
       <div class="flex flex-wrap">
-        {category.skills.map((skill) => <span class={skillClass}>{skill}</span>)}
+        {category.skills.map((skill) => <span class={skillClass}> {skill} </span>)}
       </div>
     </div>
   ))}

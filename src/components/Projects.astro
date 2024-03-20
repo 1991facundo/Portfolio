@@ -128,29 +128,35 @@ const PROJECTS = [
         {project.title}
       </h3>
       <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p>
-      <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
-      <div class="relative">
-        <a href={project.Demo ? project.Demo : project.link} class="block">
-          <img
-            class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full"
-            src={project.image}
-            alt={`${project.title} image`}
-          />
-          <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 group-hover:opacity-100 rounded-3xl flex items-center justify-center">
-            <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">
-              {project.Demo ? "Click to see demo on YouTube" : "Visit the site"}
-            </p>
-          </div>
-        </a>
-      </div>
-      <div class="flex flex-wrap mt-4 text-pretty">
-        {project.tags.map((tag) => (
-          <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
-        ))}
-      </div>
+      {project.description && (
+        <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
+      )}
+      {project.image && (
+        <div class="relative">
+          <a href={project.Demo ? project.Demo : project.link} target="_blank" rel="noopener noreferrer" class="block">
+            <img
+              class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full"
+              src={project.image}
+              alt={`${project.title} image`}
+            />
+            <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 group-hover:opacity-100 rounded-3xl flex items-center justify-center">
+              <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">
+                {project.Demo ? "Click to see demo on YouTube" : "Visit the site"}
+              </p>
+            </div>
+          </a>
+        </div>
+      )}
+      {project.tags && project.tags.length > 0 && (
+        <div class="flex flex-wrap mt-4 text-pretty">
+          {project.tags.map((tag) => (
+            <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
+          ))}
+        </div>
+      )}
       {project.github && (
         <div class="flex mt-2 text-pretty">
-          <a href={project.github} class="flex items-center text-gray-400 hover:text-white transition">
+          <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-white transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
