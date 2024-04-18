@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import AcademicProjects from "../components/AcademicProjects.astro";
 import SocialPill from "../icons/SocialPill.astro";
 import Linkedin from "../icons/Linkedin.astro";
 import Github from "../icons/Github.astro";
@@ -55,11 +56,13 @@ import HSkills from "../icons/HSkills.astro"
       </nav>
 
       <h4 class="text-white mt-4">
-<p>✰ Full Stack Developer, Henry Bootcamp (2023)</p> 
-<p>✰ Professional Frontend Developer, UTN, Buenos Aires (2022)</p>
-<p>✰ Expert in UX and IxD, UTN, Buenos Aires (2022)</p>
+<p>✰ Full Stack Developer, Bootcamp (2023)</p> 
+<p>✰ Professional Frontend Developer, UTN Buenos Aires, (2022)</p>
+<p>✰ Expert in UX and IxD, UTN Buenos Aires, (2022)</p>
+<p>✰ Php 8 Developer, Udemy, (2021)</p>
 <p>✰ Mobile & Web design, DaVinci Design School, Buenos Aires (2016)</p>
-<p>✰ Bachelor's Degree in Audiovisual Communication, UNSaM, Buenos Aires (2012)</p></h4>
+<p>✰ Bachelor's Degree in Audiovisual Communication, UNSaM, Buenos Aires (2009 - 2013)</p>
+      </h4>
 
     </SectionContainer>
 
@@ -86,6 +89,14 @@ import HSkills from "../icons/HSkills.astro"
         Projects
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-2xl text-white font-semibold mb-6 flex gap-x-3 items-center mt-8">
+        <Code class="size-7" />
+        Academic Projects
+      </h2>
+      <AcademicProjects />
     </SectionContainer>
 
     <SectionContainer id="experience">

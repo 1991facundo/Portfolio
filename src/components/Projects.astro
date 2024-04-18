@@ -1,34 +1,50 @@
 ---
-import connectinkImage from "../assets/connectink.jpeg";
-import pokemonImg from "../assets/pokemon.jpeg";
-import rickImg from "../assets/rickandmorty.png";
-import poblenouImg from "../assets/poblenou.jpg";
-import barcadeImg from "../assets/barcade.jpg";
-import mtgImg from "../assets/mtg.png";
+import connectinkImg from "../assets/connectink.jpeg";
+import horariosImg from "../assets/horariosdecolectivo.png";
+import carreraImg from "../assets/carrera.png";
+import villaImg from "../assets/villa.png";
+import outletSaleImg from "../assets/outletsale.png";
+
 
 const PROJECTS = [
-   {
-    year: "2024" ,
-    title: "API Integration and Management @ Freelance",
-    description:
-      "Freelance consultancy and development to optimize Shopify and Prestashop stores, implementing supplier API connections and managing inventory uploads via .CSV files. Demonstrates system integration and process automation skills, enhancing e-commerce operational efficiency.",
+
+{
+    year: 2024,
+    title: "https://www.montagne.com.ar/",
+    description: "As a Full Stack Web Developer at Montagne Outdoors SA, I develop and manage dynamic landing pages using a tech stack that includes PHP, JavaScript, SQL, HTML, and CSS. My work enhances user engagement and site navigation, integrating custom development, responsive design, and performance optimization for improved e-commerce functionality. You can view examples of my work at:",
+    links: [
+      {
+        url: "https://www.montagne.com.ar/carreras/",
+        image: carreraImg.src
+      },
+      {
+        url: "https://www.montagne.com.ar/carreras/villa-la-angostura/",
+        image: villaImg.src
+      },
+      {
+        url: "https://www.montagne.com.ar/eventos/2024/outletsale-marzo/",
+        image: outletSaleImg.src
+      },
+    ],
     tags: [
-      "JavaScript",
       "PHP",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "CSS",
+      "Smarty",
       "PrestaShop",
-      "Shopify",
-      "Wordpress",
-      "API REST",
-      "API SOAP",
+      "Responsive Design",
     ],
   },
+
   {
     year: 2023,
-    title: "ConnectINK",
+    title: "https://connectink.vercel.app/",
     description:
-      "This groundbreaking platform revolutionizes how tattoo artists and enthusiasts connect, offering a unique space for artists to showcase their work, manage schedules, and connect with clients. Clients, in turn, can easily browse, appreciate, and book tattoo sessions. Developed using React.js and Next.js, the platform features an intuitive and engaging user interface, ensuring a seamless and enjoyable user experience. A focus was placed on crafting a visually appealing design with Tailwind CSS, making the platform not only attractive but also responsive and accessible across various devices. A significant enhancement to the platform's functionality is the integration of a secure and efficient payment method, such as Mercado Pago. This addition is crucial in today's digital marketplace, allowing for smooth financial transactions between artists and clients, further enriching the user experience. Additionally, Redux Toolkit was integrated for efficient state management, significantly enhancing the app's performance. My contribution to ConnectInk was to create a functional, user-friendly, and aesthetically pleasing platform, fostering a meaningful and efficient connection between tattoo artists and their clients, while emphasizing the importance of secure payment integration.",
+      "ConnectINK is an innovative platform that revolutionizes how tattoo enthusiasts, clients, and artists connect. This social network allows users to explore local or distant tattoo artists' work, follow their updates, and easily book appointments. It incorporates typical social networking features such as commenting, saving favorites, and booking sessions. Payments are streamlined through MercadoPago for secure booking transactions, with email confirmations sent upon appointment scheduling. Appointments can be modified or canceled as needed. Developed using React and JavaScript, the platform leverages Redux Toolkit for state management and Next.js for framework support, enabling efficient deployment on Vercel. The backend is powered by Node.js, with Express handling API requests and Sequelize as the ORM. PostgreSQL is used for database management, hosted on Railway. TailwindCSS enhances the UI design, while Cloudinary supports image uploads.",
     github: "https://github.com/1991facundo/ConnectInk",
-    image: connectinkImage.src,
+    image: connectinkImg.src,
     tags: [
       "React.js",
       "Redux",
@@ -42,82 +58,28 @@ const PROJECTS = [
       "PostgreSQL",
       "Sequelize",
       "Cloudinary",
-      "Firebase",
     ],
     Demo: "https://youtu.be/g8iIK1iHBBQ?si=tH3Rd-HFc9452JGP",
   },
-
+ 
   {
     year: 2023,
-    title: "Full Stack Pokémon UI",
-    image: pokemonImg.src,
+    title: "https://horariodecolectivos.com.ar/",
     description:
-      "This application is a blend of childhood nostalgia for Pokémon and my passion for coding. Developed using React.js, it features an interactive Pokédex and a unique feature for creating custom Pokémon. The user interface is enhanced by Tailwind CSS, ensuring a responsive and engaging experience. With Redux for state management, and a backend powered by Node.js and Express, the platform is both robust and user-friendly. A significant advantage of this backend setup is the ability to create various Pokémon that are stored in the database along with their necessary information. This functionality is made possible through sophisticated models in Sequelize, which enable the creation and storage of Pokémon details. These models are crucial for the dynamic retrieval of Pokémon information, which is then beautifully rendered on the frontend, showcasing the characters in the UI. This project not only reconnects users with their cherished Pokémon memories but also showcases the capabilities of modern web development in creating immersive experiences. My aim was to blend the magic of Pokémon with cutting-edge technology, providing a platform that is both nostalgic and forward-looking, appealing to fans across generations. The use of Express and Sequelize is pivotal for this backend functionality, enabling the seamless creation and management of custom Pokémon, further enhancing the user's engagement with the platform.",
-    github: "https://github.com/1991facundo/PI-Pokemon-1991facundo",
+      "I developed a custom WordPress theme specifically designed to improve both navigation and accessibility, creating a user-friendly experience tailored to the needs of the audience. Utilizing WordPress hooks, I customized site functionalities to better serve user interactions and workflow efficiency. This customization extended to integration with essential plugins and widgets that enhance user engagement and site performance. Additionally, I collaborated closely with an SEO professional to optimize the website for search engines, ensuring that content and structure were aligned with best practices in SEO. This partnership was pivotal in devising effective monetization strategies, such as targeted advertising and optimized keyword usage, which significantly increased traffic and revenue potential. Together, these efforts made the site not only more accessible and navigable for users but also more profitable and visible in a competitive digital landscape",
+    image: horariosImg.src,
     tags: [
-      "React.js",
-      "Redux",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Sequelize"
-    ],
-    Demo: "https://youtu.be/hH3D6g3d4eM?si=_uv1iGwYHA0_5NwP",
-  },
-
-  {
-    year: 2023,
-    title: "Full Stack Rick&Morty API UI",
-    image: rickImg.src,
-    description:
-      "This Rick and Morty API UI project, my first foray into full-stack development, orbits around the cosmic adventure of web programming. Leveraging the same powerful stack—React.js, Redux, JavaScript, HTML, CSS, Node.js, Express, PostgreSQL, and Sequelize—I created a portal to the universe of Rick and Morty. The application serves as a galactic hub where fans can explore characters, locations, and episodes from the show, all within a user interface designed to mirror the quirky, interdimensional vibe of Rick and Morty. Enhanced by Tailwind CSS, the design is not only visually striking but also responsive, ensuring a seamless journey across devices. A standout feature of the database is the ability to store our favorite characters, further enriching the user experience. Additionally, it supports user registration, allowing fans to personalize their exploration and engage more deeply with the content. This project was a space-time continuum of learning and creativity, aiming to provide an engaging platform for fans to dive deep into the show's lore, while showcasing the potential of modern web technologies to bring beloved universes to life.",
-    tags: [
-      "React.js",
-      "Redux",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Sequelize"
-    ],
-    Demo: "https://youtu.be/NAoxIF0anAs?si=fzMxqgOw5vHR2mRe",
-  },
-
-  {
-    year:2022,
-    title: "PobleNou marketing agency website",
-    image: poblenouImg.src,
-    github: "https://github.com/1991facundo/final-diplomado-frontEnd-Utn",
-    description:
-      "In this project, I embarked on developing a dynamic marketing agency website, utilizing my skills in HTML, CSS, JavaScript, and Bootstrap for the first time in a cohesive project. This venture aimed to craft a visually engaging and informative platform to highlight the agency's services, including digital marketing, content creation, and social media management. Through the integration of Bootstrap, I ensured the website's design was responsive and adaptable across various devices, providing an optimal viewing experience for all users. JavaScript played a pivotal role in adding interactivity and enhancing the user interface, making the agency's offerings and achievements stand out. This project was not just about building a website; it was about creating a digital gateway that reflects the agency's innovative approach to marketing, showcasing my ability to blend design with functionality effectively.",
-    tags: [
+      "Wordpress",
+      "PHP",
       "HTML",
       "CSS",
       "JavaScript",
-      "Bootstrap"
+      "SEO",
     ],
-    link: "https://facundofernandez-final-utn-bootstrap.netlify.app/",
+    link: "https://horariodecolectivos.com.ar/",
   },
 
-  {
-    year:2022,
-    title: "Barcade website",
-    image: barcadeImg.src,
-    github: "https://github.com/1991facundo/Barcade-LandingAndFormResponsive",
-    description:
-      "In my first foray into web development, I created a comprehensive landing page for Barcade, a unique establishment combining a bar's social atmosphere with the thrill of arcade gaming. This project was my introduction to coding, utilizing HTML and CSS exclusively. It was an exploration into web design, focusing on creating a multi-page website that effectively communicates the Barcade concept. I incorporated CSS animations to enhance the user experience, adding interactive elements that engage visitors as they navigate through the site. These animations were thoughtfully designed to complement the site's theme, capturing the playful and dynamic essence of arcade gaming. A key feature of the website is a contact form, inviting users to get in touch or book events, demonstrating my initial venture into creating interactive web elements. This project was not just about learning HTML and CSS; it was about weaving those skills into creating a functional, engaging, and visually appealing website that mirrors the fun and uniqueness of the Barcade experience, marking a significant milestone in my journey into web development.",
-    tags: [
-      "HTML",
-      "CSS",
-      "CSS Animations"
-    ],
-    link: "https://facundofernandez-land-form.netlify.app/",
-  },
+
 ];
 ---
 
@@ -125,35 +87,57 @@ const PROJECTS = [
   PROJECTS.map((project) => (
     <article class="relative group p-4 md:p-6 text-white">
       <h3 class="text-xl md:text-2xl font-semibold mb-2 text-[#48d9e6]">
-        {project.title}
+       <span>{project.title}</span> 
       </h3>
       <p class="text-md md:text-lg mb-2 text-gray-400">{project.year}</p>
-      {project.description && (
-        <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
+      <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
+      
+     
+      {project.links && (
+        <div class="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
+          {project.links.map(link => (
+            <div class="w-full md:w-1/3 group relative">  
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                <img class="rounded-xl shadow-lg cursor-pointer h-64 object-cover w-full" src={link.image} alt="Project link image" style={{ height: '250px' }} />
+                <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-xl flex items-center justify-center">
+                  <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Visit the Site</p>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
       )}
-      {project.image && (
+
+      {project.Demo && (
         <div class="relative">
-          <a href={project.Demo ? project.Demo : project.link} target="_blank" rel="noopener noreferrer" class="block">
-            <img
-              class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full"
-              src={project.image}
-              alt={`${project.title} image`}
-            />
-            <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 group-hover:opacity-100 rounded-3xl flex items-center justify-center">
-              <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">
-                {project.Demo ? "Click to see demo on YouTube" : "Visit the site"}
-              </p>
+          <a href={project.Demo} target="_blank" rel="noopener noreferrer">
+            <img class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full" src={project.image} alt="ConnectINK demo link" />
+            <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-3xl flex items-center justify-center">
+              <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Watch the Demo</p>
             </div>
           </a>
         </div>
       )}
+
+      {project.link && (
+        <div class="relative">
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <img class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full" src={project.image} alt="Horarios de Colectivos site link" />
+            <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-3xl flex items-center justify-center">
+              <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Visit the Site</p>
+            </div>
+          </a>
+        </div>
+      )}
+
       {project.tags && project.tags.length > 0 && (
         <div class="flex flex-wrap mt-4 text-pretty">
-          {project.tags.map((tag) => (
+          {project.tags.map(tag => (
             <span class="mr-2 mb-2 md:mb-0">#{tag}</span>
           ))}
         </div>
       )}
+
       {project.github && (
         <div class="flex mt-2 text-pretty">
           <a href={project.github} target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-white transition">
@@ -175,4 +159,3 @@ const PROJECTS = [
     </article>
   ))
 }
-
