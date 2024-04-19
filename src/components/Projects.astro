@@ -14,6 +14,12 @@ const PROJECTS = [
     title: "https://www.montagne.com.ar/",
     description: "As a Full Stack Web Developer at Montagne Outdoors SA, I develop and manage dynamic landing pages using a tech stack that includes PHP, JavaScript, SQL, HTML, and CSS. My work enhances user engagement and site navigation, integrating custom development, responsive design, and performance optimization for improved e-commerce functionality. You can view examples of my work at:",
     links: [
+
+    {
+        url: "https://www.montagne.com.ar/locales-outlets",
+        image: localesImg.src
+      },
+
       {
         url: "https://www.montagne.com.ar/carreras/",
         image: carreraImg.src
@@ -26,10 +32,7 @@ const PROJECTS = [
         url: "https://www.montagne.com.ar/eventos/2024/outletsale-marzo/",
         image: outletSaleImg.src
       },
-      {
-        url: "https://www.montagne.com.ar/locales-outlets",
-        image: localesImg.src
-      },
+     
     ],
     tags: [
       "PHP",
@@ -98,12 +101,12 @@ const PROJECTS = [
       <p class="text-base md:text-lg mb-4 text-pretty">{project.description}</p>
       
      
-      {project.links && (
+     {project.links && (
         <div class="flex flex-wrap md:flex-nowrap justify-between gap-4 mb-4">
           {project.links.map(link => (
             <div class="w-full md:w-1/3 group relative">  
               <a href={link.url} target="_blank" rel="noopener noreferrer">
-                <img class="rounded-xl shadow-lg cursor-pointer h-64 object-cover w-full" src={link.image} alt="Project link image" style={{ height: '250px' }} />
+                <img class="rounded-xl shadow-lg cursor-pointer h-64 object-cover w-full border-4 border-gray-800 shadow-gray-500/80" src={link.image} alt="Project link image" style={{ height: '250px' }} />
                 <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-xl flex items-center justify-center">
                   <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Visit the Site</p>
                 </div>
@@ -116,7 +119,7 @@ const PROJECTS = [
       {project.Demo && (
         <div class="relative">
           <a href={project.Demo} target="_blank" rel="noopener noreferrer">
-            <img class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full" src={project.image} alt="ConnectINK demo link" />
+            <img class="rounded-3xl shadow-xl cursor-pointer w-full border-4 border-gray-800 shadow-gray-500/80" src={project.image} alt="ConnectINK demo link" />
             <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-3xl flex items-center justify-center">
               <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Watch the Demo</p>
             </div>
@@ -127,7 +130,7 @@ const PROJECTS = [
       {project.link && (
         <div class="relative">
           <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <img class="rounded-3xl shadow-xl shadow-white/10 cursor-pointer w-full" src={project.image} alt="Horarios de Colectivos site link" />
+            <img class="rounded-3xl shadow-xl cursor-pointer w-full border-4 border-gray-800 shadow-gray-500/80" src={project.image} alt="Horarios de Colectivos site link" />
             <div class="absolute inset-0 bg-gray-600 bg-opacity-85 opacity-0 hover:opacity-100 rounded-3xl flex items-center justify-center">
               <p class="text-white text-lg md:text-xl font-bold border-4 p-3 md:p-4 bg-black rounded-lg">Visit the Site</p>
             </div>
